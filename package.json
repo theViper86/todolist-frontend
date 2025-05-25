@@ -1,0 +1,19 @@
+{
+  "name": "todo-plus-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp ./main.js ./dist/main.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.501.0",
+    "jwt-decode": "^4.0.0",
+    "ramda": "^0.29.1"
+  }
+}

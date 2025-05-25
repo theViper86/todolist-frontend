@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - npm i && npm run build
+      # Please change the s3 bucket URI
+      - aws s3 cp --recursive dist/ s3://todo-plus-frontend/
+      # Please change the distribution id
+      - aws cloudfront create-invalidation --distribution-id E2A4WHGXZQDJJ8 --paths "/*"
